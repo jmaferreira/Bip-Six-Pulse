@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="450" viewBox="0 0 390 450">
+  <rect width="390" height="450" fill="#000"/>
+  <rect x="24" y="24" width="342" height="402" rx="42" fill="none" stroke="#333" stroke-width="8"/>
+  <path d="M66 24H324A42 42 0 0 1 366 66V214" fill="none" stroke="#808080" stroke-width="8"/>
+  <text x="195" y="98" fill="#808080" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">18 sep</text>
+  <g fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M45 181L65 155V306M45 306H87"/>
+    <path d="M110 178A23 23 0 0 1 133 155H135A12 12 0 0 1 147 167V193L109 306H148"/>
+    <path d="M242 178A23 23 0 0 1 265 155H267A12 12 0 0 1 279 167V193L241 306H280"/>
+    <path d="M300 158H322A15 15 0 0 1 337 173V213A15 15 0 0 1 322 228H308M308 228H322A15 15 0 0 1 337 243V288A18 18 0 0 1 319 306H300"/>
+  </g>
+  <g fill="#fff" opacity=".75"><circle cx="195" cy="199" r="10"/><circle cx="195" cy="263" r="10"/></g>
+  <text x="195" y="364" fill="#808080" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">3020 steps</text>
+</svg>

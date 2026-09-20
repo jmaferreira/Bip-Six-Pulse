@@ -1,0 +1,46 @@
+{
+  "configVersion": "v2",
+  "app": {
+    "appIdType": 0,
+    "appId": 1128016,
+    "appName": "Bip Six Pulse",
+    "appType": "watchface",
+    "version": { "code": 11, "name": "1.2.0" },
+    "vender": "Miguel Ferreira",
+    "description": "Minimal digital watch face for Amazfit Bip 6 with tall smooth numerals, subtle step progress, and a wake-up information fade-in.",
+    "icon": "icon.png",
+    "cover": ["cover.png"]
+  },
+  "permissions": [],
+  "runtime": {
+    "apiVersion": {
+      "compatible": "1.0.0",
+      "target": "1.0.1",
+      "minVersion": "1.0.0"
+    }
+  },
+  "i18n": {
+    "en-US": { "appName": "Bip Six Pulse" }
+  },
+  "defaultLanguage": "en-US",
+  "debug": false,
+  "targets": {
+    "bip-6": {
+      "module": {
+        "watchface": {
+          "path": "watchface/default-target/index",
+          "main": 1,
+          "editable": 0,
+          "lockscreen": 0,
+          "hightCost": 0
+        }
+      },
+      "platforms": [
+        { "name": "Amazfit Bip 6 CN", "deviceSource": 9765120 },
+        { "name": "Amazfit Bip 6", "deviceSource": 9765121 },
+        { "name": "Amazfit Bip 6", "deviceSource": 10158337 }
+      ],
+      "designWidth": 390
+    }
+  }
+}

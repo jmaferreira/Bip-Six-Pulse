@@ -1,0 +1,36 @@
+{
+  "name": "bip-six-pulse",
+  "version": "1.2.0",
+  "description": "A minimal digital watch face for the Amazfit Bip 6.",
+  "author": "Miguel Ferreira <jmaferreira+zepp@gmail.com>",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "keywords": [
+    "amazfit",
+    "bip-6",
+    "zepp-os",
+    "watchface"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmaferreira/Bip-Six-Pulse.git"
+  },
+  "homepage": "https://github.com/jmaferreira/Bip-Six-Pulse#readme",
+  "bugs": {
+    "url": "https://github.com/jmaferreira/Bip-Six-Pulse/issues",
+    "email": "jmaferreira+zepp@gmail.com"
+  },
+  "_moduleAliases": {
+    "zeppos-app-utils": "node_modules/@zeppos/zeus-cli/private-modules/zeppos-app-utils"
+  },
+  "scripts": {
+    "generate:digits": "node scripts/generate-digits-v4.js",
+    "generate:ring": "node scripts/generate-ring-v2-assets.js",
+    "build": "zeus build",
+    "preview": "zeus preview",
+    "bridge": "zeus bridge"
+  },
+  "devDependencies": {
+    "@zeppos/zeus-cli": "1.9.3"
+  }
+}
