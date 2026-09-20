@@ -16,8 +16,6 @@ var RING_BOTTOM = 426
 var RING_RADIUS = 42
 var RING_THICKNESS = 8
 var RING_CORNER_SIZE = 92
-// Reserve the top-centre system-status area so notification icons always stay clear.
-var TOP_STATUS_GAP = 60
 var COLON_PERIOD = 2000
 var INFO_FADE_DURATION = 4000
 var DISPLAY_RESUME_GAP = 250
@@ -85,10 +83,9 @@ function updateStepProgress() {
   removeProgressSegments()
 
   var horizontal = RING_RIGHT - RING_LEFT - RING_RADIUS * 2
-  var topSegmentLength = (horizontal - TOP_STATUS_GAP) / 2
   var vertical = RING_BOTTOM - RING_TOP - RING_RADIUS * 2
   var cornerLength = Math.PI * RING_RADIUS / 2
-  var remaining = (topSegmentLength * 2 + horizontal + vertical * 2 + cornerLength * 4) * ratio
+  var remaining = (horizontal * 2 + vertical * 2 + cornerLength * 4) * ratio
   var topX = RING_LEFT + RING_RADIUS
   var rightY = RING_TOP + RING_RADIUS
   var bottomX = RING_RIGHT - RING_RADIUS
@@ -104,11 +101,8 @@ function updateStepProgress() {
     return covered
   }
 
-  var covered = take(topSegmentLength)
+  var covered = take(horizontal)
   if (covered) addProgressRect(topX, RING_TOP - RING_THICKNESS / 2, covered, RING_THICKNESS)
-
-  covered = take(topSegmentLength)
-  if (covered) addProgressRect(topX + topSegmentLength + TOP_STATUS_GAP, RING_TOP - RING_THICKNESS / 2, covered, RING_THICKNESS)
 
   covered = take(cornerLength)
   if (covered) addProgressCorner('tr', covered / cornerLength, rightCornerX, topCornerY)
@@ -265,7 +259,6 @@ function updateColon() {
 
 function createStepTrack() {
   var horizontal = RING_RIGHT - RING_LEFT - RING_RADIUS * 2
-  var topSegmentLength = (horizontal - TOP_STATUS_GAP) / 2
   var vertical = RING_BOTTOM - RING_TOP - RING_RADIUS * 2
   var topX = RING_LEFT + RING_RADIUS
   var rightY = RING_TOP + RING_RADIUS
@@ -298,8 +291,7 @@ function createStepTrack() {
     })
   }
 
-  trackRect(topX, RING_TOP - RING_THICKNESS / 2, topSegmentLength, RING_THICKNESS)
-  trackRect(topX + topSegmentLength + TOP_STATUS_GAP, RING_TOP - RING_THICKNESS / 2, topSegmentLength, RING_THICKNESS)
+  trackRect(topX, RING_TOP - RING_THICKNESS / 2, horizontal, RING_THICKNESS)
   trackRect(RING_RIGHT - RING_THICKNESS / 2, rightY, RING_THICKNESS, vertical)
   trackRect(bottomX - horizontal, RING_BOTTOM - RING_THICKNESS / 2, horizontal, RING_THICKNESS)
   trackRect(RING_LEFT - RING_THICKNESS / 2, leftY - vertical, RING_THICKNESS, vertical)

@@ -5,7 +5,7 @@
     "appId": 1128016,
     "appName": "Bip Six Pulse",
     "appType": "watchface",
-    "version": { "code": 11, "name": "1.2.0" },
+    "version": { "code": 13, "name": "1.2.2" },
     "vender": "Miguel Ferreira",
     "description": "Minimal digital watch face for Amazfit Bip 6 with tall smooth numerals, subtle step progress, and a wake-up information fade-in.",
     "icon": "icon.png",

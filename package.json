@@ -1,6 +1,6 @@
 {
   "name": "bip-six-pulse",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "A minimal digital watch face for the Amazfit Bip 6.",
   "author": "Miguel Ferreira <jmaferreira+zepp@gmail.com>",
   "license": "GPL-3.0-only",
@@ -31,6 +31,7 @@
     "bridge": "zeus bridge"
   },
   "devDependencies": {
-    "@zeppos/zeus-cli": "1.9.3"
+    "@zeppos/zeus-cli": "1.9.3",
+    "package-json": "7.0.0"
   }
 }
